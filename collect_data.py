@@ -83,6 +83,6 @@ f = open(file_name, 'wb')
 pickle.dump({'data': data, 'labels': labels}, f)
 f.close()
 
-print(f"✅ Successfully saved {dataset_size} samples for '{class_name}'!")
+print(f"Successfully saved {dataset_size} samples for '{class_name}'!")
 cap.release()
 cv2.destroyAllWindows()
