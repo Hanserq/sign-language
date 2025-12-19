@@ -10,7 +10,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='.', template_folder='.')
 
 # --- LOAD MODEL & ENCODER ---
 model = None
@@ -100,4 +100,5 @@ def predict():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=5000)
